@@ -1,0 +1,132 @@
+﻿<!-- Tutorial: https://www.youtube.com/watch?v=Vjldip84CXQ&list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M&index=2&t=0s-->
+<Window x:Class="WpfBasics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBasics"
+        mc:Ignorable="d"
+        Title="Wpf Basics" Height="750" Width="300">
+    <Border Padding="10">
+        <StackPanel>
+            
+            <!-- Buttons -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Margin="5,0,5,0" Grid.Column="0" Content="Apply"/>
+                <Button Margin="5,0,5,0" Grid.Column="1" Content="Reset"/>
+                <Button Margin="5,0,5,0" Grid.Column="2" Content="Refresh"/>
+            </Grid>
+
+            <!-- Pulse Properties Title Field -->
+            <TextBlock Text="Pulse Properties" FontWeight="Bold" Margin="5,10"/>
+            
+            <!-- Description Field -->
+            <TextBlock Text="Description" Margin="5,0"/>
+            <TextBox Padding="2" Margin="5,0,5,0"/>
+            
+            <!-- Status and Revision -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Status -->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Status" Margin="5,0"/>
+                    <TextBox IsReadOnly="True" Padding="2" Margin="5,0,5,0" Background="#eee"/>
+                </StackPanel>
+
+                <!-- Revision -->
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Revision" Margin="5,0"/>
+                    <TextBox IsReadOnly="True" Padding="2" Margin="5,0,5,0" Background="#eee"/>
+                </StackPanel>
+            </Grid>
+            
+            <!-- Part Number -->
+            <TextBlock Text="Part Number" Margin="5,0"/>
+            <TextBox IsReadOnly="True" Padding="2" Margin="5,0,5,0" Background="#eee"/>
+
+            <!-- Raw Material Title Field -->
+            <TextBlock Text="Raw Material" FontWeight="Bold" Margin="5,10"/>
+
+            <!-- Material Field -->
+            <TextBlock Text="Material" Margin="5,0"/>
+            <ComboBox Padding="2" Margin="5,0,5,0"/>
+
+            <!-- Manufacturing Information Title Field -->
+            <TextBlock Text="Manufacturing Information" FontWeight="Bold" Margin="5,10"/>
+            <TextBlock Text="Work Centres" Margin="5,0"/>
+
+            <!-- Work Centres Check boxes -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Col 1 -->
+                <StackPanel Margin="5" Grid.Column="0">
+                    <CheckBox Content="Weld"/>
+                    <CheckBox Content="Assembly"/>
+                    <CheckBox Content="Plasma"/>
+                    <CheckBox Content="Laser"/>
+                    <CheckBox Content="Purchase"/>
+                </StackPanel>
+
+                <!-- Col 2 -->
+                <StackPanel Margin="5" Grid.Column="1">
+                    <CheckBox Content="Lathe"/>
+                    <CheckBox Content="Drill"/>
+                    <CheckBox Content="Fold"/>
+                    <CheckBox Content="Roll"/>
+                    <CheckBox Content="Saw"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- Length Field -->
+            <TextBlock Text="Length" Margin="5,0"/>
+            <TextBox Padding="2" Margin="5,0,5,0"/>
+
+            <!-- Mass Field -->
+            <TextBlock Text="Mass" Margin="5,0"/>
+            <TextBox IsReadOnly="True" Padding="2" Margin="5,0,5,0" Background="#eee"/>
+
+            <!-- Finish Field -->
+            <TextBlock Text="Finish" Margin="5,0"/>
+            <ComboBox SelectedIndex="0" Padding="2" Margin="5,0,5,0">
+                <ComboBoxItem Content="Painted"/>
+                <ComboBoxItem Content="Not Painted"/>
+            </ComboBox>
+
+            <!-- Purchase Information Field -->
+            <TextBlock Text="Purchase Information" Margin="5,0"/>
+            <ComboBox SelectedIndex="0" Padding="2" Margin="5,0,5,0">
+                <ComboBoxItem Content="Rubber"/>
+                <ComboBoxItem Content="Not Rubber"/>
+            </ComboBox>
+
+            <!-- Supplier Name Field -->
+            <TextBlock Text="Supplier Name" Margin="5,0"/>
+            <TextBox Padding="2" Margin="5,0,5,0"/>
+
+            <!-- Supplier Code Field -->
+            <TextBlock Text="Supplier Code" Margin="5,0"/>
+            <TextBox Padding="2" Margin="5,0,5,0"/>
+
+            <!-- Additional Info Title Field -->
+            <TextBlock Text="Additional Information" FontWeight="Bold" Margin="5,10"/>
+
+            <!-- Note Field -->
+            <TextBlock Text="Note" Margin="5,0"/>
+            <TextBox Padding="2" Margin="5,0,5,0"/>
+
+        </StackPanel>
+    </Border>
+</Window>
