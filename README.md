@@ -6,10 +6,10 @@
 
 <!-- <div align="center"><img src="demo.gif"></img></div> -->
 <h2>About</h2>
-University Degree's and Collage Diploma can't provide proof that I know UI design (its just a piece of paper). This repository does. The purpose of this repository is to act as proof-of-understanding to prospective employers. It allows you (as an employer/hiring manager) to interact with my work rather than banking on the marks and test scores I recieved in school. 
+This repository is to act as proof-of-understanding to prospective employers. It allows you (as an employer/hiring manager) to interact with my work rather than banking on the marks and test scores I recieved in school.
 
 <h2>Goal and requirements</h2>
-Familiarise myself with the basics of WPF and MVVM mode, allowing me to make my own software/utilities for my day-to-day life, and work related tasks.
+Familiarise myself with the basics of WPF and MVVM model, allowing me to make my own software/utilities for my day-to-day life, and work related tasks.
 
 <h2>Key learnings</h2>
 
