@@ -12,7 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+
+//TODO - https://youtu.be/6OwyNiLPDNw?t=2054
 
 namespace WpfTreeView
 {
@@ -70,6 +71,49 @@ namespace WpfTreeView
             // get fullpath name
             var fullpath = (string)item.Tag;
 
+
+            // create blank list for directories
+            var directories = new List<string>();
+
+            // try and get directories from the folder
+            // ignoring any issues
+            try
+            {
+                var dirs = Directory.GetDirectories(fullpath);
+
+                if (dirs.Length > 0)
+                {
+                    directories.AddRange(dirs);
+                }
+            }
+
+            catch
+            {
+                // do nothing...
+            }
+
+            // for each directory
+            directories.ForEach(directoryPath =>
+            {
+                // create directory item
+                var subItem = new TreeViewItem()
+                {
+                    // {set} header as folder name
+                    Header = Path.GetDirectoryName(directoryPath),
+
+                    // {set} tag as full path
+                    Tag = directoryPath
+                };
+
+                // add dummy item so we can expand the folder
+                subItem.Items.Add(null);
+
+                // recursive - handle expanding out
+                subItem.Expanded += Folder_Expanded;
+
+                // add this item to the parent item
+                item.Items.Add(subItem);
+            });
         }
     }
 }
