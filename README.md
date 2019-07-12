@@ -13,7 +13,7 @@ This repository acts as proof-of-understanding to prospective employers. It allo
 - [Using Visual Studio](https://www.youtube.com/watch?v=STw363BHviY&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=2&t=0s)
 - [Variables and Parsing](https://www.youtube.com/watch?v=HbhdHRzpkXg&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=2)
   - Accessability Levels
-  - 
+  - Parsing
 - While loops and complex logic
 
 ### [2) Learning XAML and WPF (MVVM)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)

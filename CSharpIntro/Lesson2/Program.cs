@@ -38,6 +38,11 @@ namespace Lesson2
         public string MyPublicString { get; set; }  // Property - variable accessable outside of a class
 
 
+        public void TestProg()
+        {
+            MyPublicString = "Modified in TestProg()";
+        }
+
         static void Main(string[] args)
         {
             var myProg = new Program_A();
@@ -52,10 +57,28 @@ namespace Lesson2
             // Program_A public int variable is accessable
             myProg.myPublicInt1 = 14;
 
-
             // 5. reading text from user input
-            Console.Write("Type a number: ");
+            Console.Write("Type a number between 1 and 10: ");
             myProg.MyPublicString = Console.ReadLine();
+
+
+            // 6. Parsing
+            int userNumber;
+            if (int.TryParse(myProg.MyPublicString, out userNumber) && userNumber <= 10)
+            {
+
+            }
+            else
+            {
+                if (userNumber >= 10)
+                {
+                    Console.WriteLine("Number larger than 10.");
+                }
+                else
+                {
+                    Console.WriteLine("Not a number!");
+                }
+            }
 
             Console.WriteLine("User wrote: " + myProg.MyPublicString);
             Console.ReadLine();
