@@ -11,10 +11,21 @@ This repository acts as proof-of-understanding to prospective employers. It allo
 ### [1) Learning C#](https://www.youtube.com/playlist?list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ)
 
 - [Using Visual Studio](https://www.youtube.com/watch?v=STw363BHviY&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=2&t=0s)
+  - Installation
+  - Using Breakpoints
+  - Debugging code (step in, step out)
 - [Variables and Parsing](https://www.youtube.com/watch?v=HbhdHRzpkXg&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=2)
   - Accessability Levels
   - Parsing
-- While loops and complex logic
+  - Branching Statements (if, esle)
+
+
+- [While loops and complex logic](https://www.youtube.com/watch?v=a4g8JHX5jgg&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=3)
+
+  - While loops
+  - Detailed comments
+  - Complex logic
+
 
 ### [2) Learning XAML and WPF (MVVM)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
 
