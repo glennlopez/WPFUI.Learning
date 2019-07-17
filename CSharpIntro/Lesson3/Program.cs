@@ -12,7 +12,6 @@ namespace Lesson3
             Console.ReadLine();
 
             uint maxNum = 100;
-            uint minNum = 51;
             uint guessCounter = 0;          // Counter for the number of guesses computer took
 
             uint guessRange_Lower = 0;
@@ -39,10 +38,8 @@ namespace Lesson3
                 // user: NO - we know its between 51 and 100
                 else
                 {
-                    guessRange_Lower = guessRange_Upper + 1;
-
+                    guessRange_Lower = guessRange_Upper + 1; 
                     uint rangeDiff = maxNum - guessRange_Upper;
-
                     guessRange_Upper += (uint)Math.Ceiling(rangeDiff / 2f);
 
                 }
