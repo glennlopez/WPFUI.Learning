@@ -7,10 +7,12 @@ namespace Lesson3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Think of a number 1 - 100: ");
+            Console.WriteLine("Think of a number 1 - 100.");
+            Console.WriteLine("Press [Enter] when ready.");
             Console.ReadLine();
 
             uint maxNum = 100;
+            uint minNum = 51;
             uint guessCounter = 0;          // Counter for the number of guesses computer took
 
             uint guessRange_Lower = 0;
@@ -23,40 +25,50 @@ namespace Lesson3
                 Console.WriteLine("Is your number between {0} and {1} (Y/N)?", guessRange_Lower, guessRange_Upper);
                 string response = Console.ReadLine();
 
-
-
-                /* Lower lever programming way
-                bool response_isNull = (response !=   null && response.Length > 0);
-                if (response_isNull && (response[0] == 'y' || response[0] == 'Y') )
-                {
-                    guessRange_Upper /= 2;
-                }
-                else
-                {
-                       
-                }
-                */
-
-
-
                 // C# way - using LINQ and "?" as null checker
-                // user: yes - we know its between 0 and 50
+                // user: YES - we know its between 0 and 50
                 if (response?.ToLower().FirstOrDefault() == 'y')
                 {
                     // set the maxNum to lower range number
-                    maxNum = guessRange_Lower;
-                    guessRange_Upper /= 2; 
+                    maxNum = guessRange_Upper;
+
+                    // set new range value to middle of upper and lower range
+                    guessRange_Upper = guessRange_Upper - ((guessRange_Upper - guessRange_Lower) / 2);
 
                 }
+                // user: NO - we know its between 51 and 100
                 else
                 {
-                    // user: no - we know its between 51 and 100
+                    guessRange_Lower = guessRange_Upper + 1;
 
+                    uint rangeDiff = maxNum - guessRange_Upper;
+
+                    guessRange_Upper += (uint)Math.Ceiling(rangeDiff / 2f);
 
                 }
-                
+
+                // if lower guess range is 1 number from upper guess range then there is only two numbers left
+                if ( (maxNum - guessRange_Lower) == 1)
+                {
+                    guessCounter++;
+                    Console.WriteLine("Is your number {0}?", guessRange_Lower);
+                    response = Console.ReadLine();
+
+                    if (response?.ToLower().FirstOrDefault() == 'y')
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ok, your number must be {0} then.", maxNum);
+                        guessRange_Lower = maxNum;
+                        break;
+                    }
+                }
             }
 
+            Console.WriteLine("Computer took {0} attempts to guess that your number is {1}", guessCounter, guessRange_Lower);
+            Console.ReadLine();
         }
     }
 }
