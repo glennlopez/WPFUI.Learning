@@ -39,12 +39,7 @@ namespace Lesson4
         /// </summary>
         public NumberGuesser()
         {
-            // set default max number on runtime
-            //this.MaximumNumber = 100;
 
-            // set guess ranges
-            //this.GuessRange_Upper = MaximumNumber / 2;
-            //this.GuessRange_Lower = GuessRange_Lower + ((GuessRange_Upper - GuessRange_Lower) / 2);
         }
         #endregion
 
@@ -69,7 +64,6 @@ namespace Lesson4
 
             // reset guess range on start
             this.GuessRange_Upper = MaximumNumber / 2;
-            //this.GuessRange_Lower = GuessRange_Lower + ((GuessRange_Upper - GuessRange_Lower) / 2);
 
             while (this.GuessRange_Lower != this.GuessRange_Upper)
             {

@@ -28,7 +28,7 @@ This repository acts as proof-of-understanding to prospective employers. It allo
 
 - [Classes, Functions, and Regions](https://www.youtube.com/watch?v=m4hCNg992ns&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=4)
   - Refactoring
-  - 
+  - Classes, Functions, Regions
 
 ### [2) Learning XAML and WPF (MVVM)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
 
