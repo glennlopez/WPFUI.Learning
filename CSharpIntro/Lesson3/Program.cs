@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Linq;
 
-namespace Lesson3
+
+namespace Lesson4
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
+
+           
+
             Console.WriteLine("Think of a number 1 - 100.");
             Console.WriteLine("Press [Enter] when ready.");
             Console.ReadLine();
