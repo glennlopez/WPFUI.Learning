@@ -30,7 +30,7 @@ This repository acts as proof-of-understanding to prospective employers. It allo
   - Refactoring
   - Classes, Functions, Regions
 
-- [Event Handlers](https://www.youtube.com/watch?v=W6vJ_c9Mt6A&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=5)
+- [Event Handlers (WinForms)](https://www.youtube.com/watch?v=W6vJ_c9Mt6A&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=5)
   - Windows Forms
   - Event Handlers
 
