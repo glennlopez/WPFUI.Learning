@@ -30,13 +30,17 @@ This repository acts as proof-of-understanding to prospective employers. It allo
   - Refactoring
   - Classes, Functions, Regions
 
+- [Event Handlers](https://www.youtube.com/watch?v=W6vJ_c9Mt6A&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=5)
+  - Windows Forms
+  - Event Handlers
+
 ### [2) Learning XAML and WPF (MVVM)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
 
 - [**UI Layout using XAML**](https://github.com/glennlopez/WPFUI.LearningProject/tree/master/WpfBasics)
   - Basic XML
   - XAML Template Structure
-</br>
-- **TreeViews and Value Converters**
+
+- [**TreeViews and Value Converters**](#)
   - [Intro to Data Binding](https://youtu.be/6OwyNiLPDNw?t=1032)
   - Styling Properties
 
