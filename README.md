@@ -34,7 +34,10 @@ This repository acts as proof-of-understanding to prospective employers. It allo
   - Windows Forms
   - Event Handlers
 
-### [2) Learning XAML and WPF (MVVM)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
+- [Manipulating String Text](#)
+  - s
+
+### [2) Learning WPF (MVVM architecture)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
 
 - [**UI Layout using XAML**](https://github.com/glennlopez/WPFUI.LearningProject/tree/master/WpfBasics)
   - Basic XML

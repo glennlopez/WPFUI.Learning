@@ -46,7 +46,7 @@
             this.btn9 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
-            this.btnPercent = new System.Windows.Forms.Button();
+            this.btnDiv = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
             this.ButtonsPannel.SuspendLayout();
@@ -94,7 +94,7 @@
             this.ButtonsPannel.Controls.Add(this.btn9, 2, 1);
             this.ButtonsPannel.Controls.Add(this.btn8, 1, 1);
             this.ButtonsPannel.Controls.Add(this.btn7, 0, 1);
-            this.ButtonsPannel.Controls.Add(this.btnPercent, 3, 0);
+            this.ButtonsPannel.Controls.Add(this.btnDiv, 3, 0);
             this.ButtonsPannel.Controls.Add(this.btnDel, 2, 0);
             this.ButtonsPannel.Controls.Add(this.btnCE, 0, 0);
             this.ButtonsPannel.Location = new System.Drawing.Point(12, 77);
@@ -117,6 +117,7 @@
             this.btnEquals.TabIndex = 19;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
+            this.btnEquals.Click += new System.EventHandler(this.BtnEquals_Click);
             // 
             // btnPeriod
             // 
@@ -272,16 +273,16 @@
             this.btn7.UseVisualStyleBackColor = true;
             this.btn7.Click += new System.EventHandler(this.Btn7_Click);
             // 
-            // btnPercent
+            // btnDiv
             // 
-            this.btnPercent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPercent.Location = new System.Drawing.Point(339, 3);
-            this.btnPercent.Name = "btnPercent";
-            this.btnPercent.Size = new System.Drawing.Size(108, 78);
-            this.btnPercent.TabIndex = 3;
-            this.btnPercent.Text = "%";
-            this.btnPercent.UseVisualStyleBackColor = true;
-            this.btnPercent.Click += new System.EventHandler(this.BtnPercent_Click);
+            this.btnDiv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDiv.Location = new System.Drawing.Point(339, 3);
+            this.btnDiv.Name = "btnDiv";
+            this.btnDiv.Size = new System.Drawing.Size(108, 78);
+            this.btnDiv.TabIndex = 3;
+            this.btnDiv.Text = "/";
+            this.btnDiv.UseVisualStyleBackColor = true;
+            this.btnDiv.Click += new System.EventHandler(this.BtnDiv_Click);
             // 
             // btnDel
             // 
@@ -342,7 +343,7 @@
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn7;
-        private System.Windows.Forms.Button btnPercent;
+        private System.Windows.Forms.Button btnDiv;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnEquals;
         private System.Windows.Forms.Button btnPeriod;
