@@ -145,13 +145,47 @@ namespace BasicCalcultor
         #endregion
 
         /// <summary>
-        /// Calculates given equasion and outputs the answer to user label
+        /// Parser that calculates given equasion and outputs the answer to user label
         /// </summary>
         private void CalculateEquasion()
         {
-            //TODO: finish helper
+            var result = ParseOperation();
 
+            this.CalculationResultText.Text = ParseOperation();
             FocusInputText();
+        }
+
+
+        /// <summary>
+        /// Parses users equasion and calculates the results
+        /// </summary>
+        /// <returns></returns>
+        private string ParseOperation()
+        {
+            // exception handler
+            try
+            {
+                // get users equasion input
+                var userInput = this.UserInputText.Text;
+
+                // remove all spaces
+                userInput = userInput.Replace(" ","");
+
+                // create new top level operation
+                var operation = new Operation();
+                var leftSide = true;
+
+                for (int i = 0; i < userInput.Length; i++)
+                {
+                    //TODO: https://www.youtube.com/watch?v=Vnro3LmCsxo&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=7
+                }
+
+                return string.Empty;
+            }
+            catch(Exception ex)
+            {
+                return $"Invalid Equasion. {ex.Message}";
+            }
         }
 
         #region Private Helpers

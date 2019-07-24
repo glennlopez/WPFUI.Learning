@@ -6,7 +6,7 @@
 
 <!-- <div align="center"><img src="demo.gif"></img></div> -->
 ## About
-This repository acts as proof-of-understanding to prospective employers. It allows you (as an employer/hiring manager) to interact with the concepts I learned, tutorials I used, and mistakes plus corrections I made, rather than banking on the marks and test scores I recieved in school to make your decision.
+This educational repository acts as proof-of-understanding for C# and MVVM architechture. For notes I took during tutorials, see Wiki section.
 
 ### [1) Learning C#](https://www.youtube.com/playlist?list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ)
 
@@ -34,7 +34,13 @@ This repository acts as proof-of-understanding to prospective employers. It allo
   - Windows Forms
   - Event Handlers
 
-- [Manipulating String Text](#)
+- [Manipulating String Text](https://www.youtube.com/watch?v=s0_IuQgVEfw&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=6)
+- [Enums For Loops & Try Catch](https://www.youtube.com/watch?v=Vnro3LmCsxo&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=7)
+  - [Enums](https://youtu.be/Vnro3LmCsxo?t=99)
+  - New Class Files
+  - Recursive Function
+  - Switch Statements
+  - For loops
 
 ### [2) Learning WPF (MVVM architecture)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
 
