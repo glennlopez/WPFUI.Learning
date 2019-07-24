@@ -144,6 +144,16 @@ namespace BasicCalcultor
         }
         #endregion
 
+        /// <summary>
+        /// Calculates given equasion and outputs the answer to user label
+        /// </summary>
+        private void CalculateEquasion()
+        {
+            //TODO: finish helper
+
+            FocusInputText();
+        }
+
         #region Private Helpers
 
         /// <summary>
@@ -152,14 +162,6 @@ namespace BasicCalcultor
         private void FocusInputText()
         {
             this.UserInputText.Focus();
-        }
-
-
-        private void CalculateEquasion()
-        {
-            //TODO: finish helper
-
-            FocusInputText();
         }
 
         /// <summary>
