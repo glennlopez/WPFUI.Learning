@@ -35,7 +35,6 @@ This repository acts as proof-of-understanding to prospective employers. It allo
   - Event Handlers
 
 - [Manipulating String Text](#)
-  - s
 
 ### [2) Learning WPF (MVVM architecture)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
 
