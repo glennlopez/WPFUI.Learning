@@ -41,6 +41,8 @@ This educational repository acts as proof-of-understanding for C# and MVVM archi
   - Recursive Function
   - Switch Statements
   - For loops
+  - Throwing Exceptions
+  - Try/Catch
 
 ### [2) Learning WPF (MVVM architecture)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
 

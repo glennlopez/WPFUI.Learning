@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BasicCalcultor
@@ -177,7 +178,18 @@ namespace BasicCalcultor
 
                 for (int i = 0; i < userInput.Length; i++)
                 {
-                    //TODO: https://www.youtube.com/watch?v=Vnro3LmCsxo&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=7
+                    //TODO: handle order priority
+                    // 4 + 5 * 3 / (2 + 1) = ans
+
+                    // check if the number is 0123456789.
+                    if (".0123456789".Any(character => userInput[i] == character))
+                    {
+                        if (leftSide)
+                        {
+                            operation.LeftSide = AddNumberPart(operation.LeftSide, userInput[i]);
+                        }
+                    }
+
                 }
 
                 return string.Empty;
@@ -186,6 +198,22 @@ namespace BasicCalcultor
             {
                 return $"Invalid Equasion. {ex.Message}";
             }
+        }
+
+        /// <summary>
+        /// Attempts to add a new character to the new numver checking for invalid charcters
+        /// </summary>
+        /// <param name="currentNum">The Current Number String</param>
+        /// <param name="newChar">New Character to append to the string</param>
+        /// <returns></returns>
+        private string AddNumberPart(string currentNum, char newChar)
+        {
+            // check for multiple "."
+            if (newChar == '.' && currentNum.Contains('.'))
+            {
+                throw new InvalidOperationException($"The number {currentNum} already contains a dot.");
+            }
+            return currentNum + newChar;
         }
 
         #region Private Helpers
