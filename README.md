@@ -6,7 +6,7 @@
 
 <!-- <div align="center"><img src="demo.gif"></img></div> -->
 ## About
-This educational repository acts as proof-of-understanding for C# and MVVM architechture. For notes I took during tutorials, see Wiki section.
+This educational repository acts as proof-of-basic-understanding in C# and MVVM architechture. For notes I took during tutorials, see Wiki section.
 
 ### [1) Learning C#](https://www.youtube.com/playlist?list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ)
 
@@ -39,10 +39,13 @@ This educational repository acts as proof-of-understanding for C# and MVVM archi
   - [Enums](https://youtu.be/Vnro3LmCsxo?t=99)
   - New Class Files
   - Recursive Function
-  - Switch Statements
+  - [Switch Statements](https://youtu.be/oOAeCOQ8yCs?t=493)
   - For loops
   - Throwing Exceptions
   - Try/Catch
+
+- Intro to WPF 
+  - [Inline Styling](https://youtu.be/mnTyiUAHuVk?t=794)
 
 ### [2) Learning WPF (MVVM architecture)](https://www.youtube.com/playlist?list=PLrW43fNmjaQVYF4zgsD0oL9Iv6u23PI6M)
 
