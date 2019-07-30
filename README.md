@@ -5,8 +5,8 @@
 <br/>
 
 <!-- <div align="center"><img src="demo.gif"></img></div> -->
-## About
-This educational repository acts as proof-of-basic-understanding in C# and MVVM architechture. For notes I took during tutorials, see Wiki section.
+## Learning Objectives
+This educational repository acts as proof-of-basic-understanding in C# and MVVM architechture. For notes I took during tutorials, see Wiki section. 
 
 ### [1) Learning C#](https://www.youtube.com/playlist?list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ)
 
