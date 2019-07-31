@@ -82,9 +82,31 @@ namespace TicTacToe
                 return;
             }
 
+            // cast sender to button
             var button = (Button)sender;
+
+            // find button position in array
             var column = Grid.GetColumn(button);
             var row = Grid.GetRow(button);
+
+            var index = column + (row * 3);
+
+            // dont do anything if the cell has a value in it already
+            if (_results[index] != MarkType.Free)
+                return;
+
+            // set the cell value based on the player
+            if (_player1Turn)
+                _results[index] = MarkType.Cross;
+            else
+                _results[index] = MarkType.Nought;
+
+            // set button text content
+            button.Content = _player1Turn ? "X" : "O";
+
+            // toggle player turn
+            _player1Turn ^= true;
+
         }
     }
 }
