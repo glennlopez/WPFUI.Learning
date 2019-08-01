@@ -104,8 +104,104 @@ namespace TicTacToe
             // set button text content
             button.Content = _player1Turn ? "X" : "O";
 
+            // change noughts to green
+            if (!_player1Turn)
+                button.Foreground = Brushes.Red;
+
             // toggle player turn
             _player1Turn ^= true;
+
+            CheckForWinner();
+
+        }
+
+        /// <summary>
+        /// Check for possible winner
+        /// </summary>
+        private void CheckForWinner()
+        {
+            var winnerBrush = Brushes.GreenYellow;
+
+            #region Check Row
+            // Row 1 for winner
+            if (_results[0] != MarkType.Free && (_results[0] & _results[1] & _results[2]) == _results[0])
+            {
+                // set gameover
+                _gameOver = true;
+
+                // highlight winning cells in green
+                Button0_0.Background = Button1_0.Background = Button2_0.Background = winnerBrush;
+            }
+            // Row 2 for winner
+            if (_results[3] != MarkType.Free && (_results[3] & _results[4] & _results[5]) == _results[3])
+            {
+                // set gameover
+                _gameOver = true;
+
+                // highlight winning cells in green
+                Button0_1.Background = Button1_1.Background = Button2_1.Background = winnerBrush;
+            }
+            // Row 3 for winner
+            if (_results[6] != MarkType.Free && (_results[6] & _results[7] & _results[8]) == _results[6])
+            {
+                // set gameover
+                _gameOver = true;
+
+                // highlight winning cells in green
+                Button0_2.Background = Button1_2.Background = Button2_2.Background = winnerBrush;
+            }
+            #endregion
+
+            #region Check Column
+            // Column 1 for winner
+            if (_results[0] != MarkType.Free && (_results[0] & _results[3] & _results[6]) == _results[0])
+            {
+                // set gameover
+                _gameOver = true;
+
+                // highlight winning cells in green
+                Button0_0.Background = Button0_1.Background = Button0_2.Background = winnerBrush;
+            }
+            // Column 2 for winner
+            if (_results[1] != MarkType.Free && (_results[1] & _results[4] & _results[7]) == _results[1])
+            {
+                // set gameover
+                _gameOver = true;
+
+                // highlight winning cells in green
+                Button1_0.Background = Button1_1.Background = Button1_2.Background = winnerBrush;
+            }
+            // Column 3 for winner
+            if (_results[2] != MarkType.Free && (_results[2] & _results[5] & _results[8]) == _results[2])
+            {
+                // set gameover
+                _gameOver = true;
+
+                // highlight winning cells in green
+                Button2_0.Background = Button2_1.Background = Button2_2.Background = winnerBrush;
+            }
+            #endregion
+
+            #region Check Diagonal
+
+            #endregion
+
+            #region Check zero sum game
+            // check for zero move left
+            if (!_results.Any(single_result => single_result == MarkType.Free ))
+            {
+                // set game state to gameover
+                _gameOver = true;
+
+                // set cells to inidicate stale game
+                Container.Children.Cast<Button>().ToList().ForEach(button =>
+                {
+                    // set defaults for new game
+                    button.Background = Brushes.Orange;
+                });
+
+            }
+            #endregion
 
         }
     }
