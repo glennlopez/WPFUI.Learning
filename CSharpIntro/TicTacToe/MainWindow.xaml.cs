@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+// Tutorial - https://www.youtube.com/watch?v=mnTyiUAHuVk&list=PLrW43fNmjaQXhWOKalftye87ObZA-xNIJ&index=9
 
 namespace TicTacToe
 {
@@ -15,7 +16,6 @@ namespace TicTacToe
         public MainWindow()
         {
             InitializeComponent();
-
             NewGame();
         }
 
@@ -111,12 +111,36 @@ namespace TicTacToe
             // toggle player turn
             _player1Turn ^= true;
 
+            CheckForStale();
             CheckForWinner();
 
         }
 
         /// <summary>
-        /// Check for possible winner
+        /// Check for stale-mate / no more turns possible / tie-game
+        /// </summary>
+        private void CheckForStale()
+        {
+            #region Check zero sum game
+            // check for zero move left
+            if (!_results.Any(single_result => single_result == MarkType.Free))
+            {
+                // set game state to gameover
+                _gameOver = true;
+
+                // set cells to inidicate stale game
+                Container.Children.Cast<Button>().ToList().ForEach(button =>
+                {
+                    // set defaults for new game
+                    button.Background = Brushes.Orange;
+                });
+
+            }
+            #endregion
+        }
+
+        /// <summary>
+        /// Check for possible win pattern
         /// </summary>
         private void CheckForWinner()
         {
@@ -183,23 +207,26 @@ namespace TicTacToe
             #endregion
 
             #region Check Diagonal
+            // TODO:
 
-            #endregion
-
-            #region Check zero sum game
-            // check for zero move left
-            if (!_results.Any(single_result => single_result == MarkType.Free ))
+            // Top left - bottom right
+            if (_results[0] != MarkType.Free && (_results[0] & _results[4] & _results[8]) == _results[0])
             {
-                // set game state to gameover
+                // set gameover
                 _gameOver = true;
 
-                // set cells to inidicate stale game
-                Container.Children.Cast<Button>().ToList().ForEach(button =>
-                {
-                    // set defaults for new game
-                    button.Background = Brushes.Orange;
-                });
+                // highlight winning cells in green
+                Button0_0.Background = Button1_1.Background = Button2_2.Background = winnerBrush;
+            }
 
+            // Top right - bottom left
+            if (_results[2] != MarkType.Free && (_results[2] & _results[4] & _results[6]) == _results[2])
+            {
+                // set gameover
+                _gameOver = true;
+
+                // highlight winning cells in green
+                Button0_2.Background = Button1_1.Background = Button2_0.Background = winnerBrush;
             }
             #endregion
 
